@@ -40,15 +40,15 @@ const Home = () => {
   }
 
   return (
-    <div className='absolute inset-0 flex flex-col justify-center bg-black'>
+    <div className='absolute inset-0 flex flex-col justify-center bg-yellow-400'>
       <section className='py-8 text-center'>
         <Container>
-          <div className='h-8 mb-48 bg-blue-400 p-20 text-white'><span>{loading ? (
+          <div className='h-8 mb-48 bg-blue-700 p-20 text-white'><span>{loading ? (
             'Generating...'
           ) : result}</span></div>
           <div>
             <button
-              className='border-2 p-2 rounded-md text-white'
+              className='border-2 p-2 rounded-md text-white bg-green-500'
               disabled={loading}
               onClick={() => getRandomData({
                 length: 1,

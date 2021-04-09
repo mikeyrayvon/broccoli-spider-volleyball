@@ -29,26 +29,28 @@ const Home = () => {
   const getDirection = (t) => {
     console.log(t)
     if (isInSeq(1, t)) {
-      return 'Forward'
+      return '↑'
     } else if (isInSeq(2, t)) {
-      return 'Right'
+      return '→'
     } else if (isInSeq(3, t)) {
-      return 'Backward'
+      return '←'
     } else if (isInSeq(4, t)) {
-      return 'Left'
+      return '↓'
     }
   }
 
   return (
-    <div className='absolute inset-0 flex flex-col justify-center bg-yellow-400'>
+    <div className='absolute inset-0 flex flex-col justify-center bg-yellow-600'>
       <section className='py-8 text-center'>
         <Container>
-          <div className='h-8 mb-48 bg-blue-700 p-20 text-white'><span>{loading ? (
-            'Generating...'
-          ) : result}</span></div>
+          <div className='h-20 w-20 mx-auto mb-48 text-white text-2xl text-center bg-blue-700 flex items-center justify-center border-8 border-red-600'>
+            <div><span>{loading ? (
+              '...'
+            ) : result}</span></div>
+          </div>
           <div>
             <button
-              className='border-2 p-2 rounded-md text-white bg-green-500'
+              className='border-2 p-2 rounded-md text-white bg-green-700'
               disabled={loading}
               onClick={() => getRandomData({
                 length: 1,

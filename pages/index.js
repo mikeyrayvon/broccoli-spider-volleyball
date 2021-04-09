@@ -40,26 +40,31 @@ const Home = () => {
   }
 
   return (
-    <div className='absolute inset-0 flex flex-col justify-center bg-yellow-600'>
-      <section className='py-8 text-center'>
-        <Container>
-          <div className='h-32 w-32 mx-auto mb-48 text-white text-6xl text-center bg-blue-700 flex items-center justify-center border-8 border-red-600'>
-            <div><span>{loading ? (
-              '...'
-            ) : result}</span></div>
-          </div>
-          <div>
-            <button
-              className='border-2 p-2 rounded-md text-white bg-green-700'
-              disabled={loading}
-              onClick={() => getRandomData({
-                length: 1,
-                type: 'uint8'
-              })}>Quantum Random Direction</button>
-          </div>
-        </Container>
-      </section>
-    </div>
+    <>
+      <Head>
+        <title>broccoli spider volleyball</title>
+      </Head>
+      <div className='absolute inset-0 flex flex-col justify-center bg-yellow-600'>
+        <section className='py-8 text-center'>
+          <Container>
+            <div className='h-32 w-32 mx-auto mb-48 text-white text-6xl text-center bg-blue-700 flex items-center justify-center border-8 border-red-600'>
+              <div><span>{loading ? (
+                '...'
+              ) : result}</span></div>
+            </div>
+            <div>
+              <button
+                className='border-2 p-2 rounded-md text-white bg-green-700'
+                disabled={loading}
+                onClick={() => getRandomData({
+                  length: 1,
+                  type: 'uint8'
+                })}>Quantum Random Direction</button>
+            </div>
+          </Container>
+        </section>
+      </div>
+    </>
   )
 }
 

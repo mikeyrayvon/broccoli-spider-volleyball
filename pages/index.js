@@ -43,7 +43,7 @@ const Home = () => {
     <div className='absolute inset-0 flex flex-col justify-center bg-yellow-600'>
       <section className='py-8 text-center'>
         <Container>
-          <div className='h-20 w-20 mx-auto mb-48 text-white text-2xl text-center bg-blue-700 flex items-center justify-center border-8 border-red-600'>
+          <div className='h-32 w-32 mx-auto mb-48 text-white text-6xl text-center bg-blue-700 flex items-center justify-center border-8 border-red-600'>
             <div><span>{loading ? (
               '...'
             ) : result}</span></div>

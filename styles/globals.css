@@ -6,7 +6,8 @@
 /* purgecss end ignore */
 
 html, body {
-  font-size: 18px;
+  @apply bg-yellow-100;
+  font-size: 16px;
 }
 
 .container {

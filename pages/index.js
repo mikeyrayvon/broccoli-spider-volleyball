@@ -65,8 +65,9 @@ const Home = () => {
     <>
       <Head>
         <title>broccoli spider volleyball</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1' />
       </Head>
-      <div className='absolute inset-0 flex flex-col justify-between text-center p-12 bg-green-500'>
+      <div className='absolute inset-0 flex flex-col justify-between text-center p-12'>
           <div className="">
             <span>Imagine you're a quantum fluctuation in a vacuum in Australia</span>
           </div>
@@ -77,7 +78,7 @@ const Home = () => {
           </div>
           <div>
             <button
-              className='border-4 border-red-500 rounded-full p-4'
+              className='border border-black rounded-xl p-4'
               disabled={loading}
               onClick={() => getRandomData({
                 length: 3,

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Head from 'next/head'
 import { verbs } from '../verbs'
+import * as gtag from '../utils/gtag'
 
 import { postData } from '../utils/api'
 
@@ -11,6 +12,12 @@ const Home = () => {
   const [loading, setLoading] = useState(false)
   const getRandomData = (query) => {
     setLoading(true)
+
+    gtag.event({
+      action: 'play',
+      category: 'engagement'
+    })
+
     postData('/api/qrng', query)
     .then(res => {
       const dir = getDirection(res.data[0])
